@@ -16,9 +16,25 @@ class lapiz {
     getColor() {
         return this.color;
     }
+    getDimension() {
+        return this.dimension;
+    }
+    getBorrador() {
+        return this.borrador;
+    }
+    getMaterial() {
+        return this.material;
+    }
+    getMarca() {
+        return this.marca;
+    }
 }
 let obj = undefined;
 let  color = document.querySelector(`[name="color]`)
+let  dimension = document.querySelector(`[name="value]`)
+let  borrador = document.querySelector(`[name="borrador]`)
+let  materialmarca = document.querySelector(`[name="materialmarca]`)
+let  marca = document.querySelector(`[name="marca]`)
 addEventListener("DOMContentLoaded",(e)=>{
     obj = new lapiz();
 })
