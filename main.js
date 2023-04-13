@@ -11,7 +11,7 @@ class lapiz {
         this.dimension = dimension;
         this.borrador = borrador;
         this.material = material;
-        this.marca = marca;
+        this.#marca = marca;
     }
     getColor() {
         return this.color;
@@ -51,25 +51,28 @@ let material = document.querySelector(`[name="material"]`)
 let marca = document.querySelector(`[name="marca"]`)
 addEventListener("DOMContentLoaded", (e) => {
     obj = new lapiz({});
-    color.value = obj.color
-    dimension.value = obj.dimension
-    document.querySelector(`[name="marca"][value="${obj.marca}"]`).checked = true;
-    document.querySelector(`[name="borrador"][value="${obj.borrador}"]`).checked = true;
-    document.querySelector(`[name="material"][value="${obj.material}"]`).checked = true;
+    color.value = obj.getColor()
+    dimension.value = obj.getDimension()
+    document.querySelector(`[name="marca"][value="${obj.getMarca()}"]`).checked = true;
+    document.querySelector(`[name="borrador"][value="${obj.getBorrador()}"]`).checked = true;
+    document.querySelector(`[name="material"][value="${obj.getMaterial()}"]`).checked = true;
 })
-const tabla = document.querySelector("#tabla-lapices");
+const tabla = document.querySelector("#tablaLapices");
 const formulario = document.querySelector("#myForm");
 
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
     const Lapiz = new lapiz({}).obtener();
     const row = tabla.insertRow();
+    /* const celdaColor = row.insertCell();
+    celdaColor.textContent=Lapiz.getColor();
+    celdaColor.style.backgrounColor=Lapiz.getColor(); */
     row.insertCell().textContent = Lapiz.getColor();
     row.insertCell().textContent = Lapiz.getDimension();
     row.insertCell().textContent = Lapiz.getMarca();
     row.insertCell().textContent = Lapiz.getBorrador() ? "Tiene" : "No Tiene";
     row.insertCell().textContent = Lapiz.getMaterial();
-    formulario.reset();
+    /* formulario.reset(); */
 });
 
 const value = document.querySelector("#value")

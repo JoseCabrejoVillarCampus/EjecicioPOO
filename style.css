@@ -1,0 +1,59 @@
+body{
+    justify-content: center;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    background-color: black;
+    color: azure;
+}
+#tabla, #tablaLapices{
+    text-align: center;
+}
+#a, #b,#c,#d{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: rgb(253, 109, 12);
+    font-weight: bolder;
+}
+#b,#c,#d{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+legend{
+    margin-top: 2%;
+    color: aqua;
+    text-shadow: 2px 2px 2px white;
+    font-weight: bolder;
+}
+#btn{
+    margin-top: 2%;
+    color: aquamarine;
+    background-color: rgb(253, 109, 12) ;
+    border-radius: 10%;
+}
+#tabla{ 
+    text-align: center;
+    width: 100%;
+    border-radius: 3%;
+}
+th{
+    color:rgb(241, 122, 10);
+    font-weight: bolder;
+    border-radius: 5%;
+}
+td{
+    color: blueviolet;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px white;
+    border-radius: 3%;
+}
+#a{
+    border-color: aqua;
+    border-radius: 5%;
+}
+#b,#c,#d{
+    border-color: aqua;
+    border-radius: 3%;
+}

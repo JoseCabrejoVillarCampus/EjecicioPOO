@@ -6,34 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form id="myForm">
-        <fieldset>
+        <fieldset id="a">
             <legend>Clase Lapiz</legend>
             <label>Color</label>
             <input type="color" name="color"><br>
             <label>Dimension</label>
             <input id="pi_input" type="range" min="5" max="30"/>
             <p>Value: <output id="value"></output></p><br>
-            <fieldset>
+            <fieldset id="b">
                 <legend>Marca</legend>
                 <input type="radio" name="marca" value="Mongol"><label>Mongo</label><br>
                 <input type="radio" name="marca" value="Norma"><label>Norma</label><br>
                 <input type="radio" name="marca" value="Fabel Castle"><label>Fabel Castle</label><br>
                 <input type="radio" name="marca" value="Big"><label>Big</label><br>
             </fieldset>
-            <fieldset>
+            <fieldset id="c">
                 <legend>Borrador</legend>
                 <input type="radio" name="borrador" value="true"><label>Tiene</label><br>
                 <input type="radio" name="borrador" value="false"><label>No tiene</label><br>
             </fieldset>
-            <fieldset>
+            <fieldset id="d">
                 <legend>Material</legend>
                 <input type="radio" name="material" value="Madera"><label>Madera</label><br>
                 <input type="radio" name="material" value="Goma"><label>Goma</label><br>
             </fieldset>
-            <input type="submit" value="Enviar">
+            <input id="btn" type="submit" value="Enviar">
         </fieldset>
     </form>
     <br><br><br>
@@ -47,7 +48,7 @@
                 <th>Material</th>
             </tr>
         </thead>
-        <tbody id="tabla-lapices">
+        <tbody id="tablaLapices">
 
         </tbody>
     </table>
