@@ -35,21 +35,21 @@ class lapiz {
         const borrador = document.querySelector('[name="borrador"]:checked').value === "true";
         const material = document.querySelector('[name="material"]:checked').value;
         return new lapiz({
-          color,
-          dimension,
-          marca,
-          borrador,
-          material,
+            color,
+            dimension,
+            marca,
+            borrador,
+            material,
         });
-      }
+    }
 }
 let obj = undefined;
-let  color = document.querySelector(`[name="color"]`)
-let  dimension = document.querySelector(`[id="value"]`)
-let  borrador = document.querySelector(`[name="borrador"]`)
-let  material = document.querySelector(`[name="material"]`)
-let  marca = document.querySelector(`[name="marca"]`)
-addEventListener("DOMContentLoaded",(e)=>{
+let color = document.querySelector(`[name="color"]`)
+let dimension = document.querySelector(`[id="value"]`)
+let borrador = document.querySelector(`[name="borrador"]`)
+let material = document.querySelector(`[name="material"]`)
+let marca = document.querySelector(`[name="marca"]`)
+addEventListener("DOMContentLoaded", (e) => {
     obj = new lapiz({});
     color.value = obj.color
     dimension.value = obj.dimension
@@ -61,15 +61,15 @@ const tabla = document.querySelector("#tabla-lapices");
 const formulario = document.querySelector("#myForm");
 
 formulario.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const Lapiz = new lapiz({}).obtener();
-  const row = tabla.insertRow();
-  row.insertCell().textContent = Lapiz.getColor();
-row.insertCell().textContent = Lapiz.getDimension();
-row.insertCell().textContent = Lapiz.getMarca();
-row.insertCell().textContent = Lapiz.getBorrador() ? "Sí" : "No";
-row.insertCell().textContent = Lapiz.getMaterial();
-  formulario.reset();
+    event.preventDefault();
+    const Lapiz = new lapiz({}).obtener();
+    const row = tabla.insertRow();
+    row.insertCell().textContent = Lapiz.getColor();
+    row.insertCell().textContent = Lapiz.getDimension();
+    row.insertCell().textContent = Lapiz.getMarca();
+    row.insertCell().textContent = Lapiz.getBorrador() ? "Tiene" : "No Tiene";
+    row.insertCell().textContent = Lapiz.getMaterial();
+    formulario.reset();
 });
 
 const value = document.querySelector("#value")
