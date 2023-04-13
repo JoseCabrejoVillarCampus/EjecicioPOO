@@ -8,13 +8,13 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <form>
+    <form id="myForm">
         <fieldset>
             <legend>Clase Lapiz</legend>
             <label>Color</label>
             <input type="color" name="color"><br>
             <label>Dimension</label>
-            <input id="pi_input" type="range" min="5" max="30" step="any" />
+            <input id="pi_input" type="range" min="5" max="30"/>
             <p>Value: <output id="value"></output></p><br>
             <fieldset>
                 <legend>Marca</legend>
@@ -37,7 +37,7 @@
         </fieldset>
     </form>
     <br><br><br>
-    <table border="solid">
+    <table id="tabla" border="solid">
         <thead>
             <tr>
                 <th>Color</th>
@@ -47,7 +47,7 @@
                 <th>Material</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tabla-lapices">
 
         </tbody>
     </table>
